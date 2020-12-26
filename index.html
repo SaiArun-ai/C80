@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Data Absorbing And Storing</title>
+        <link rel = "stylesheet" text = "text/css" href = "style.css">
+    </head>
+    <body>
+        <h1 id = "MainH1">Data Storer And Sorter!!!</h1>
+        <input id = "S1"></input>
+        <input id = "S2"></input>
+        <div>
+            <h1 id = Names></h1>
+        </div>
+        <br>
+        <button id = "Submit" onClick = "SuF1()">Submit</button>
+        <button id = "Sort" onClick = "SoF2()" style = display:none;>Sort</button>
+        <script>
+            var Students = [];
+            function SuF1(){
+                var Student1 = document.getElementById("S1").value ;
+                var Student2 = document.getElementById("S2").value ;
+                Students.push(Student1,Student2);
+                document.getElementById("Names").innerHTML = Students;
+                document.getElementById("Sort").style.display = "inline";
+                document.getElementById("Submit").style.display = "none";
+            }
+            function SoF2(){
+                Students.sort();
+                document.getElementById("Names").innerHTML = Students;
+            }
+        </script>
+    </body>
+</html>
